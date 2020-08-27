@@ -1,0 +1,365 @@
+@font-face {
+  font-family: 'TelefonicaWeb';
+  src: url('fonts/Telefonica-Regular.eot');
+  src: url('fonts/Telefonica-Regular.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Telefonica-Regular.woff2') format('woff2'),
+      url('fonts/Telefonica-Regular.woff') format('woff'),
+      url('fonts/Telefonica-Regular.ttf') format('truetype'),
+      url('fonts/Telefonica-Regular.svg#Telefonica-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TelefonicaWeb';
+  src: url('fonts/Telefonica-Regular_1.eot');
+  src: url('fonts/Telefonica-Regular_1.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Telefonica-Regular_1.woff2') format('woff2'),
+      url('fonts/Telefonica-Regular_1.woff') format('woff'),
+      url('fonts/Telefonica-Regular_1.ttf') format('truetype'),
+      url('fonts/Telefonica-Regular_1.svg#Telefonica-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* * {font-family: 'TelefonicaWeb';} */
+
+body{
+  /* background-image: url(img/background.png); */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: white;
+  width: 100%;
+}
+
+* {box-sizing: border-box}
+
+.logo{
+  width: 300px;
+}
+
+.navbar {
+  background-color: #0593E1;
+  border-radius: 0px 0px 50px 50px;
+  height: 150px;
+}
+
+.tab-pane-header {
+  padding:1rem;
+  background-color:#0C263B;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom:1rem;
+}
+
+.dotgreen {
+  height: 13px;
+  width: 13px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotred {
+  height: 13px;
+  width: 13px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  
+}
+
+
+.form-group {
+  font-size: 14px;
+  display: flex;
+  background-color: #0C263B;
+  padding: 10px;
+  margin-left: auto;
+}
+.form-inline input {
+  width: auto;
+}
+.form-inline button {
+  background-color: #5fc400;
+}
+
+/* carrier billing */
+table, th, td {
+  border-bottom: 1px solid darkgray;
+  border-collapse: collapse;
+  margin-left: 50px;
+  color: dimgray;
+}
+th, td {
+  padding: 3px;
+  text-align: left;
+  padding-right: 15px;
+}
+
+.div-alerta {
+  color: white;
+  background-color: #01b3e4;
+  border-radius: 25px;
+  width: 430px;
+  height: 40px;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: smaller;
+  margin: auto;
+}
+
+.alerta {
+  padding: 4px;
+}
+
+legend {
+  color: darkblue;
+  font-size: 16px;
+  font-weight: bold;
+  width: auto;
+  margin-left: 15px;
+}
+
+fieldset {
+  font-size: 14px;
+  border-radius: 10px;
+  border: 2px solid darkgray;
+  margin: 10px;
+  padding: 1px;
+}
+
+fieldset p {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+fieldset .fecharenovacion {
+  margin-bottom: 10px;
+}
+
+.montoutilizado {
+  border-radius: 10px;
+  border: 1px solid darkgray;
+  border-left: 10px solid #01b3e4;
+  padding: 10px;
+  margin: 20px;
+}
+
+.limitecredito {
+  border-radius: 10px;
+  border: 1px solid darkgray;
+  border-left: 10px solid #FD3849;
+  padding: 10px;
+  margin: 20px;
+}
+
+.limiteriesgo {
+  border-radius: 10px;
+  border: 1px solid darkgray;
+  border-left: 10px solid #5fc400;
+  padding: 10px;
+  margin: 20px;
+}
+
+.montoutilizado p {
+  margin-top: 5px;
+  color: #01b3e4;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.limitecredito p {
+  margin-top: 5px;
+  color: #FE3849;
+  font-weight: bold;
+  text-align: center;
+}
+
+.limiteriesgo p {
+  margin-top: 5px;
+  color: #5fc400;
+  font-weight: bold;
+  text-align: center;
+}
+
+.limite td {
+  text-align-last: justify;
+  border: none;
+}
+
+.tdusado {
+  color: #01b3e4;
+  font-weight: bold;
+}
+
+.tdlimite {
+  color: #FE3849;
+  font-weight: bold;
+  text-align: end;
+}
+
+.thusado {
+  background-color: #EAEAEA;
+  border-right: 2px solid #01b3e4;
+  color: #01b3e4;
+  font-weight: bold;
+}
+
+.thlimite {
+  background-color: #EAEAEA;
+  color: #FE3849;
+  font-weight: bold;
+  text-align: end;
+}
+
+.limite table, th{
+  border: none;
+}
+
+.muprice {
+  font-size: 20px;
+}
+
+.lcprice {
+  font-size: 20px;
+}
+
+.compras td {
+  text-align-last: justify;
+  border: none;
+}
+
+.buttons {
+  text-align: end;
+  padding: 20px;
+}
+
+.buttons > button {
+  margin-left: 10px;
+}
+
+.square {
+  height: 20px;
+  width: 20px;
+  background-color: orange;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+.compras .switch {
+  margin-left: 5px;
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 10px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  background-color: #FE3849;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: -2px;
+  bottom: -3px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5fc400;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #5fc400;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #0C263B;
+    width: 20%;
+    height: auto;
+    border-radius: 0px 20px 20px 0px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 10px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 0px 15px 15px 0px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #01b3e4;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #E63780;
+    border: none;
+    outline: none;
+    border-radius: 0px 15px 15px 0px;
+    width: 100%;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 0px;
+    border: 1px solid #ccc;
+    width: 78%;
+    height: auto;
+    margin-left: 20px;
+    background-color: #E5E5E3;
+    border-radius: 10px 10px 5px 5px;
+  }

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="navbar navbar-expand-lg justify-content-between">
+    <img src="img/movistarlogo.png" class="logo"><div class="vl" style="border-left: 2px solid white; height: 80px; margin-right: 50px;"></div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item li1">
+        <a class="nav-link text-white"><b>MSISDN</b></a>
+        <a class="nav-link text-white"><b>PLATAFORMA</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white">XXXXXXXXXXXXXX</a>
+        <a class="nav-link text-white">PORTAL MANAGER</a>
+      </li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div class="tab">
+    <button class="accordion">+ Portal Manager</button>
+    <div class="panel">
+      <button class="tablinks" onclick="navTabs(event, 'spm')" id="defaultOpen">- Suscripción PM</button>
+      <button class="tablinks" onclick="navTabs(event, 'epm')">- Evento PM</button>
+      <button class="tablinks" onclick="navTabs(event, 'epd')">- Eventos PackDigital</button>
+      <button class="tablinks" onclick="navTabs(event, 'cb')">- Eventos CarrierBilling</button>
+      <button class="tablinks" onclick="navTabs(event, 'cc')">- Carrier Contratado</button>
+    </div>
+    <button class="accordion">+ CC Roaming</button>
+    <div class="panel">
+      <button class="tablinks">- Ejemplo</button>
+      <button class="tablinks">- Ejemplo</button>
+    </div>
+    <button class="accordion">+ Notification Manager</button>
+    <div class="panel">
+      <button class="tablinks">- Ejemplo</button>
+      <button class="tablinks">- Ejemplo</button>
+    </div>
+    <button class="accordion">+ PrePlan</button>
+    <div class="panel">
+      <button class="tablinks">- Ejemplo</button>
+      <button class="tablinks">- Ejemplo</button>
+    </div>
+  </div>
+  <style>
+    .accordion {
+      background-color: #0C263B;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      font-weight: bold;
+    }
+    
+    .active, .accordion:hover {
+      background-color: #0C263B;
+      border: none;
+      outline: none;
+    }
+    
+    .panel {
+      /* padding: 0px 18px; */
+      display: none;
+      background-color: #0C263B;
+      overflow: hidden;
+    }
+    </style>
+
+  <div id="spm" class="tabcontent">
+    <form class="form">
+      <div class="form-group">
+        <label class="searchlabel text-white"><b>DESDE</b></label>
+        <input type="date" class="form-control h-25 mx-sm-3">
+        <label class="searchlabel text-white"><b>HASTA</b></label>
+        <input type="date" class="form-control h-25 mx-sm-3">
+        <button type="button" class="btn btn-outline-light btn-sm"><b>CONSULTAR</b></button>
+      </div>
+    </form>
+    <div class="tab-pane-header text-white font-weight-bold">
+      <div class="row">            
+        <div class="col-sm"><p class="text-center mb-0">NUMERO CORTO</p></div>
+        <div class="col-sm"><p class="text-center mb-0">NOMBRE</p></div>
+        <div class="col-sm"><p class="text-center mb-0">ULTIMO EVENTO</p></div>
+        <div class="col-sm"><p class="text-center mb-0">ESTADO</p></div>
+      </div>
+    </div>
+    <div class="row">            
+      <div class="col-sm"><p class="text-center mb-1">99646</p></div>
+      <div class="col-sm"><p class="text-center mb-1">Test</p></div>
+      <div class="col-sm"><p class="text-center mb-1">16-06-2023 12:53:06</p></div>
+      <div class="col-sm"><p class="text-center mb-1"><span class="dotgreen mr-2"></span> ACTIVO</p></div>
+    </div>
+    <div class="row">            
+      <div class="col-sm"><p class="text-center mb-1">99647</p></div>
+      <div class="col-sm"><p class="text-center mb-1">Test</p></div>
+      <div class="col-sm"><p class="text-center mb-1">16-06-2023 12:01:56</p></div>
+      <div class="col-sm"><p class="text-center mb-1"><span class="dotred mr-2"></span> OFFLINE</p></div>
+    </div>
+  </div>
+
+  <div id="epm" class="tabcontent">
+    <div class="tab-pane-header text-white font-weight-bold">
+      <div class="row">            
+        <div class="col-sm"><p class="text-center mb-0">ENVIADO</p></div>
+        <div class="col-sm"><p class="text-center mb-0">RECIBIDO</p></div>
+        <div class="col-sm"><p class="text-center mb-0">MSG</p></div>
+        <div class="col-sm"><p class="text-center mb-0">FECHA</p></div>
+      </div>
+    </div>
+    <p class= "ml-3">2: Additional information Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi quo aut, maiores saepe aperiam suscipit sed! Amet sed nam ipsam qui at numquam similique esse cupiditate accusamus. Eum, reprehenderit?</p>
+  </div>
+
+  <div id="epd" class="tabcontent">
+    <div class="tab-pane-header text-white font-weight-bold">
+      <div class="row">            
+        <div class="col-sm"><p class="text-center mb-0">ACCIÓN</p></div>
+        <div class="col-sm"><p class="text-center mb-0">ID TRANSACCIÓN</p></div>
+        <div class="col-sm"><p class="text-center mb-0">ESTADO</p></div>
+        <div class="col-sm"><p class="text-center mb-0">FECHA</p></div>
+        <div class="col-sm"><p class="text-center mb-0">DESCRIPCIÓN</p></div>
+        <div class="col-sm"><p class="text-center mb-0">SERVICIO</p></div>
+        <div class="col-sm"><p class="text-center mb-0">PRECIO</p></div>
+      </div>
+    </div>
+    <p class= "ml-3">3: Additional information Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi quo aut, maiores saepe aperiam suscipit sed! Amet sed nam ipsam qui at numquam similique esse cupiditate accusamus. Eum, reprehenderit?</p>
+  </div>
+
+  <div id="cb" class="tabcontent">
+    <div class="row">
+      <div class="service col">
+        <fieldset><legend> Límite de Crédito </legend>
+          <div class="row">
+            <div class="montoutilizado col">
+              <p>Monto Utilizado:</p>
+              <p class="muprice">$5.000</p>
+            </div>
+
+            <div class="limitecredito col">
+              <p>Límite de Crédito:</p>
+              <p class="lcprice">$20.000</p>
+            </div>
+
+            <div class="limiteriesgo col">
+              <p>Límite Riesgo:</p>
+              <p class="lcprice">3.490</p>
+            </div>
+        </div>
+        <div class="limite row">
+          <div class="col">
+          <table>
+            <tbody>
+            <tr>
+              <th class="thlimite">&nbsp;</th>
+              <th class="thusado">Usado</th>
+              <th class="thlimite">Límite</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="square"></div>Terra 
+            </td>
+            <td class="tdusado">
+              $400
+            </td>
+            <td class="tdlimite">
+              $5.000
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="square" style="background-color: #02B2E3;"></div>Mplay
+            </td>
+            <td class="tdusado">
+              --
+            </td>
+            <td class="tdlimite">
+              --
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="square" style="background-color: #48A000;"></div>Spotify
+            </td>
+            <td class="tdusado">
+              $400
+            </td>
+            <td class="tdlimite">
+              $5.000
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="square" style="background-color: #FB0218;"></div>Netflix
+            </td>
+            <td class="tdusado">
+              $400
+            </td>
+            <td class="tdlimite">
+              $5.000
+            </td>
+          </tr>
+          </tbody>
+          </table>
+          <br>
+          </div>
+          <div class="col">
+            <table>
+              <tbody>
+                <tr>
+                  <th class="thlimite">&nbsp;</th>
+                  <th class="thusado">Usado</th>
+                  <th class="thlimite">Límite</th>
+              </tr>
+                <tr>
+                  <td>
+                    <div class="square" style="background-color: #707070;"></div>Apple
+                  </td>
+                  <td class="tdusado">
+                    $400
+                  </td>
+                  <td class="tdlimite">
+                    $5.000
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="square" style="background-color: #48A000;"></div>Google
+                  </td>
+                  <td class="tdusado">
+                    $400
+                  </td>
+                  <td class="tdlimite">
+                    $5.000
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="square" style="background-color: #0607DE;"></div>Samsung
+                  </td>
+                  <td class="tdusado">
+                    $400
+                  </td>
+                  <td class="tdlimite">
+                    $5.000
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </fieldset>
+      </div>
+
+      <div class="service col">
+        <fieldset><legend> Autorización de Compras </legend>
+          
+          <p>Aquí podrás bloquear y desbloquear la posibilidad de compra del cliente en estos servicios</p>
+          <div class="compras">
+            <table>
+              <tbody>
+              <tr>
+              <td><div class="square"></div>Terra 
+                <label class="switch">
+                  <input type="checkbox" class="check3">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td><div class="square" style="background-color: #48A000;"></div>Spotify
+                <label class="switch">
+                  <input type="checkbox" class="check3">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td><div class="square" style="background-color: #707070;"></div>Apple
+                <label class="switch">
+                  <input type="checkbox" class="check3">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td><div class="square" style="background-color: #48A000;"></div>Google
+                <label class="switch">
+                  <input type="checkbox" class="check3">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              </tr>
+              <tr>
+              <td><div class="square" style="background-color: #02B2E3;"></div>Mplay
+                <label class="switch">
+                  <input type="checkbox" class="check3">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td><div class="square" style="background-color: #FB0218;"></div>Netflix
+                <label class="switch">
+                  <input type="checkbox" class="check3">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td><div class="square" style="background-color: #0607DE;"></div>Samsung
+                <label class="switch">
+                  <input type="checkbox" class="check3">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td>&nbsp;</td>
+              </tr>
+              </tbody>
+              </table>
+          </div>
+          <div class="buttons">
+            <button type="button" class="btn btn-danger w-25 p-1" onclick="uncheckAll()"><ion-icon class="ionicon" name="remove"></ion-icon>Bloquear todo</button>
+            <button type="button" class="btn btn-success w-25 p-1" onclick="checkAll()"><ion-icon name="checkmark-outline"></ion-icon>Habilitar todo</button>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="tab-pane-header text-white font-weight-bold">
+      <div class="row">            
+        <div class="col-sm"><p class="text-center mb-0">EMPRESA</p></div>
+        <div class="col-sm"><p class="text-center mb-0">FECHA</p></div>
+        <div class="col-sm"><p class="text-center mb-0">DESCRIPCIÓN</p></div>
+        <div class="col-sm"><p class="text-center mb-0">INDICADOR COBRO</p></div>
+        <div class="col-sm"><p class="text-center mb-0">TIPO ABONO</p></div>
+        <div class="col-sm"><p class="text-center mb-0">ID TRANSACCIÓN</p></div>
+        <div class="col-sm"><p class="text-center mb-0">ID TRANSACCIÓN TEF</p></div>
+        <div class="col-sm"><p class="text-center mb-0">PRECIO</p></div>
+      </div>
+    </div>
+    <p class= "ml-3">4: Additional information Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi quo aut, maiores saepe aperiam suscipit sed! Amet sed nam ipsam qui at numquam similique esse cupiditate accusamus. Eum, reprehenderit?</p>
+  </div>
+  <div id="cc" class="tabcontent">
+    <div class="tab-pane-header text-white font-weight-bold">
+      <div class="row">            
+        <div class="col-sm"><p class="text-center mb-0">MSISDN</p></div>
+        <div class="col-sm"><p class="text-center mb-0">CARRIER</p></div>
+        <div class="col-sm"><p class="text-center mb-0">IDO/IDD</p></div>
+        <div class="col-sm"><p class="text-center mb-0">ACCIÓN</p></div>
+      </div>
+    </div>
+    <div class="row">            
+      <div class="col-sm"><p class="text-center mb-1">99646</p></div>
+      <div class="col-sm"><p class="text-center mb-1">Test</p></div>
+      <div class="col-sm"><p class="text-center mb-1">123</p></div>
+      <div class="col-sm"><p class="text-center mb-1">
+        <button type="button" class="btn btn-danger w-30 p-1">Eliminar</button>
+        <button type="button" class="btn btn-success w-30 p-1">Modificar</button>
+      </p></div>
+    </div>
+  </div>
+
+  <script>
+  function navTabs(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+  </script>
+
+  <script>$('.collapse').collapse()</script>
+   
+</body>
+</html>
