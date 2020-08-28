@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+  <!-- HEADER -->
   <div class="navbar navbar-expand-lg justify-content-between">
     <img src="img/movistarlogo.png" class="logo"><div class="vl" style="border-left: 2px solid white; height: 80px; margin-right: 50px;"></div>
     <ul class="navbar-nav mr-auto">
@@ -25,7 +26,7 @@
   </div>
 
   <br>
-
+<!-- SIDE BAR -->
   <div class="tab">
     <button class="accordion">+ Portal Manager</button>
     <div class="panel">
@@ -51,34 +52,9 @@
       <button class="tablinks">- Ejemplo</button>
     </div>
   </div>
-  <style>
-    .accordion {
-      background-color: #0C263B;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-      transition: 0.4s;
-      font-weight: bold;
-    }
-    
-    .active, .accordion:hover {
-      background-color: #0C263B;
-      border: none;
-      outline: none;
-    }
-    
-    .panel {
-      /* padding: 0px 18px; */
-      display: none;
-      background-color: #0C263B;
-      overflow: hidden;
-    }
-    </style>
-
+<!-- CONTENIDO DE LAS TAB -->
+<!----- PM ----->
+<!-- TAB SUSCRIPCION PM -->
   <div id="spm" class="tabcontent">
     <form class="form">
       <div class="form-group">
@@ -110,7 +86,7 @@
       <div class="col-sm"><p class="text-center mb-1"><span class="dotred mr-2"></span> OFFLINE</p></div>
     </div>
   </div>
-
+<!-- TAB EVENTO PM -->
   <div id="epm" class="tabcontent">
     <div class="tab-pane-header text-white font-weight-bold">
       <div class="row">            
@@ -122,7 +98,7 @@
     </div>
     <p class= "ml-3">2: Additional information Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi quo aut, maiores saepe aperiam suscipit sed! Amet sed nam ipsam qui at numquam similique esse cupiditate accusamus. Eum, reprehenderit?</p>
   </div>
-
+<!-- TAB EVENTOS PD -->
   <div id="epd" class="tabcontent">
     <div class="tab-pane-header text-white font-weight-bold">
       <div class="row">            
@@ -137,7 +113,7 @@
     </div>
     <p class= "ml-3">3: Additional information Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi quo aut, maiores saepe aperiam suscipit sed! Amet sed nam ipsam qui at numquam similique esse cupiditate accusamus. Eum, reprehenderit?</p>
   </div>
-
+<!-- TAB EVENTOS CB -->
   <div id="cb" class="tabcontent">
     <div class="row">
       <div class="service col">
@@ -341,6 +317,7 @@
     </div>
     <p class= "ml-3">4: Additional information Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi quo aut, maiores saepe aperiam suscipit sed! Amet sed nam ipsam qui at numquam similique esse cupiditate accusamus. Eum, reprehenderit?</p>
   </div>
+  <!-- TAB CARRIER CONTRATADO -->
   <div id="cc" class="tabcontent">
     <div class="tab-pane-header text-white font-weight-bold">
       <div class="row">            
@@ -362,6 +339,7 @@
   </div>
 
   <script>
+    // FUNCIONES PARA SIDE BAR
   function navTabs(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -394,8 +372,6 @@ for (i = 0; i < acc.length; i++) {
   });
 }
   </script>
-
-  <script>$('.collapse').collapse()</script>
    
 </body>
 </html>
