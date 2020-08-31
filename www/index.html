@@ -34,7 +34,7 @@
       <button class="tablinks" onclick="navTabs(event, 'epm')">- Evento PM</button>
       <button class="tablinks" onclick="navTabs(event, 'epd')">- Eventos PackDigital</button>
       <button class="tablinks" onclick="navTabs(event, 'cb')">- Eventos CarrierBilling</button>
-      <button class="tablinks" onclick="navTabs(event, 'cc')">- Carrier Contratado</button>
+      <button class="tablinks" onclick="contratado(event, 'cc')">- Carrier Contratado</button>
     </div>
     <button class="accordion">+ CC Roaming</button>
     <div class="panel">
@@ -323,18 +323,18 @@
       <div class="row">            
         <div class="col-sm"><p class="text-center mb-0">MSISDN</p></div>
         <div class="col-sm"><p class="text-center mb-0">CARRIER</p></div>
-        <div class="col-sm"><p class="text-center mb-0">IDO/IDD</p></div>
+        <div class="col-sm"><p class="text-center mb-0" id="codigo">IDO/IDD</p></div>
         <div class="col-sm"><p class="text-center mb-0">ACCIÓN</p></div>
       </div>
     </div>
-    <div class="row">            
-      <div class="col-sm"><p class="text-center mb-1">99646</p></div>
+    <div class="row" id="test">            
+      <!-- <div class="col-sm"><p class="text-center mb-1">99646</p></div>
       <div class="col-sm"><p class="text-center mb-1">Test</p></div>
       <div class="col-sm"><p class="text-center mb-1">123</p></div>
       <div class="col-sm"><p class="text-center mb-1">
         <button type="button" class="btn btn-danger w-30 p-1">Eliminar</button>
         <button type="button" class="btn btn-success w-30 p-1">Modificar</button>
-      </p></div>
+      </p></div> -->
     </div>
   </div>
 
@@ -371,6 +371,87 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+function contratado(evt, cityName){
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+
+            $.ajax({
+                  url: 'http://10.46.0.160:8032/qin/services/PM/consulta/udb_info?msisdn=56977095634',
+                  type: "GET",
+                  contentType: "application/json",
+            })  
+                 .done( function (request) {
+                  console.log(request);
+                  vol = document.getElementById('test');
+                  if(request.carrier) {
+                    aux_html = `
+                    <div class="col-sm"><p class="text-center mb-1">56977095634</p></div>
+                    <div class="col-sm"><p class="text-center mb-1">` + request.carrier +`</p></div>
+                    <div class="col-sm"><p class="text-center mb-1">` + request.marcacion +`</p></div>
+                    <div class="col-sm"><p class="text-center mb-1">
+                      <button type="button" class="btn btn-danger w-30 p-1">Eliminar</button>
+                      <button type="button" class="btn btn-success w-30 p-1">Modificar</button>
+                    </p></div>
+                  `;
+                  }
+                  else {
+                    $("#codigo").html("CODIGO")
+                    aux_html = `
+                    <div class="col-sm"><p class="text-center mb-1">56977095634</p></div>
+                    <div class="col-sm"><p class="text-center mb-1"> No Registra Carrier </p></div>
+                    <div class="col-sm"><p class="text-center mb-1"> - </p></div>
+                    <div class="col-sm"><p class="text-center mb-1">
+                      <button type="button" class="btn btn-danger w-30 p-1">Agregar</button>
+                    </p></div>
+                  `;
+                  }
+                  $("#test").html(aux_html);
+
+                  /*if(action=='agregar') {
+                    carrierSelect = document.getElementById('dropCarrier');
+                    vol = document.getElementById('volteAdd');
+                    vol.value = volte;
+                    console.log(request);
+                    request.forEach(function(element) {
+  
+                      aux = element.id_udb + " - " + element.marcacion;
+                      carrierSelect.options[carrierSelect.options.length] = new Option(element.name, aux)
+                      //console.log(element);
+                    });
+                    $('#exampleModal2').modal('show');  
+                    //var url = "/qin/services/PM/consulta?msisdn=" + '{{msisdn}}';
+                    //window.location.href = url;
+                  }
+                  if(action=='modificar') {
+                    carrierSelect = document.getElementById('dropCarrierMod');
+                    vol = document.getElementById('volteMod');
+                    vol.value = volte;
+                    console.log(request);
+                    request.forEach(function(element) {
+                      aux = element.id_udb + " - " + element.marcacion;
+                      carrierSelect.options[carrierSelect.options.length] = new Option(element.name, aux)
+                      //console.log(element);
+                    });
+                    $('#exampleModal3').modal('show');
+                  }*/
+                  //for (i in request) { 
+                  //  console.log(i.id);
+                  //}
+                  //let newOption = new Option('Option Text','Option Value');
+                  //("#dropCarrier").add(newOption,undefined);
+                //uncheckAll();
+            })     
+        }
   </script>
    
 </body>
