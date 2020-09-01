@@ -32,6 +32,7 @@ body{
   background-size: cover;
   background-color: white;
   width: 100%;
+  font-size: 14px !important;
 }
 
 * {box-sizing: border-box}
@@ -41,14 +42,14 @@ body{
 }
 
 .navbar {
-  background-color: #0593E1;
+  background-color: #0C263B;
   border-radius: 0px 0px 50px 50px;
   height: 150px;
 }
 
 .tab-pane-header {
   padding:1rem;
-  background-color:#0C263B;
+  background-color:#0593E1;
   border-radius: 10px 10px 10px 10px;
   margin-bottom:1rem;
 }
@@ -70,14 +71,14 @@ body{
   
 }
 .accordion {
-  background-color: #0C263B;
+  background-color: #0593E1;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 14px;
   transition: 0.4s;
   font-weight: bold;
 }
@@ -91,22 +92,72 @@ body{
 .panel {
   /* padding: 0px 18px; */
   display: none;
-  background-color: #0C263B;
+  background-color: #0593E1;
   overflow: hidden;
 }
 
 .form-group {
   font-size: 14px;
   display: flex;
-  background-color: #0C263B;
+  background-color: #0593E1;
   padding: 10px;
   margin-left: auto;
 }
-.form-inline input {
-  width: auto;
+
+.form-group .btn {
+  background-color: #E63780;
 }
-.form-inline button {
-  background-color: #5fc400;
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #0593E1;
+  width: 20%;
+  height: auto;
+  border-radius: 0px 30px 30px 0px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: white;
+  padding: 10px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  border-radius: 0px 30px 30px 0px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #0C263B;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #0C263B;
+  border: none;
+  outline: none;
+  border-radius: 0px 30px 30px 0px;
+  width: 90%;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 0px;
+  border: 1px solid #ccc;
+  width: 78%;
+  height: auto;
+  margin-left: 20px;
+  background-color: #E5E5E3;
+  border-radius: 10px 10px 5px 5px;
 }
 
 /* carrier billing */
@@ -120,23 +171,6 @@ th, td {
   padding: 3px;
   text-align: left;
   padding-right: 15px;
-}
-
-.div-alerta {
-  color: white;
-  background-color: #01b3e4;
-  border-radius: 25px;
-  width: 430px;
-  height: 40px;
-  align-self: center;
-  text-align: center;
-  font-weight: bold;
-  font-size: smaller;
-  margin: auto;
-}
-
-.alerta {
-  padding: 4px;
 }
 
 legend {
@@ -336,54 +370,3 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* Style the tab */
-.tab {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #0C263B;
-    width: 20%;
-    height: auto;
-    border-radius: 0px 20px 20px 0px;
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
-    display: block;
-    background-color: inherit;
-    color: white;
-    padding: 10px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 17px;
-    border-radius: 0px 15px 15px 0px;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #01b3e4;
-  }
-  
-  /* Create an active/current "tab button" class */
-  .tab button.active {
-    background-color: #E63780;
-    border: none;
-    outline: none;
-    border-radius: 0px 15px 15px 0px;
-    width: 100%;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    float: left;
-    padding: 0px 0px;
-    border: 1px solid #ccc;
-    width: 78%;
-    height: auto;
-    margin-left: 20px;
-    background-color: #E5E5E3;
-    border-radius: 10px 10px 5px 5px;
-  }
